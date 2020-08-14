@@ -59,6 +59,7 @@ class Mysql extends AbstractAdapter
                 'from' => $fromCurrency,
                 'to' => $toCurrency,
             ])
+            ->orderBy(['created_at' => SORT_DESC])
             ->scalar($this->db);
     }
 
